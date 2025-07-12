@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>생성형 AI와 함께하는 스마트 행정 업무</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성형 AI를 활용한 스마트 행정 업무 가이드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <div class="container mx-auto max-w-5xl p-4 sm:p-6 md:p-8">
+        
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-stone-900">🤖 생성형 AI와 함께하는 스마트 행정 업무</h1>
+            <p class="mt-2 text-lg text-stone-600">나의 똑똑한 AI 신입사원을 만나 반복 업무를 줄여보세요!</p>
+        </header>
+
+        <nav class="bg-white rounded-lg shadow-md p-2 mb-8 flex flex-col sm:flex-row justify-center items-center gap-2">
+            <button data-tab="notebooklm" class="tab-btn active w-full sm:w-auto flex-1 font-bold py-3 px-4 rounded-md">
+                <span class="text-xl mr-2">📑</span> 문서 요약 및 분석
+            </button>
+            <button data-tab="appscript" class="tab-btn w-full sm:w-auto flex-1 font-bold py-3 px-4 rounded-md">
+                <span class="text-xl mr-2">✨</span> 반복 작업 자동화
+            </button>
+            <button data-tab="aistudio" class="tab-btn w-full sm:w-auto flex-1 font-bold py-3 px-4 rounded-md">
+                <span class="text-xl mr-2">✍️</span> 글쓰기 및 초안 작성
+            </button>
+        </nav>
+
+        <main>
+            <!-- NotebookLM Section -->
+            <section id="notebooklm" class="content-section active fade-in">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4">똑똑한 문서 비서, NotebookLM</h2>
+                    <p class="mb-6 text-stone-700">
+                        수십 페이지짜리 공문, 이제 다 읽지 마세요. NotebookLM은 두꺼운 책도 밤새 읽고 핵심만 보고하는 '문서 요약 전문가'입니다. 여러 문서를 동시에 분석하고 필요한 정보만 쏙쏙 찾아주죠.
+                    </p>
+                    
+                    <div class="bg-stone-100 rounded-lg p-6">
+                        <h3 class="font-bold text-lg mb-4">"이렇게 동작해요!" - 직접 체험해보세요</h3>
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <div class="w-full md:w-1/3">
+                                <p class="font-semibold mb-2">1. 분석할 문서</p>
+                                <div class="bg-white p-3 rounded-md border border-stone-200">
+                                    <p>📄 학교_안전_강화_계획.pdf</p>
+                                    <p>📄 체험활동_예산안.docx</p>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-2/3">
+                                <p class="font-semibold mb-2">2. 질문하기</p>
+                                <div class="space-y-2">
+                                    <button class="w-full text-left bg-blue-100 text-blue-800 p-2 rounded-md hover:bg-blue-200 transition" onclick="runNotebookLMSim('summarize')">"핵심 내용 5가지로 요약해줘"</button>
+                                    <button class="w-full text-left bg-blue-100 text-blue-800 p-2 rounded-md hover:bg-blue-200 transition" onclick="runNotebookLMSim('find')">"CCTV 추가 설치 내용은 어디있어?"</button>
+                                    <button class="w-full text-left bg-blue-100 text-blue-800 p-2 rounded-md hover:bg-blue-200 transition" onclick="runNotebookLMSim('compare')">"두 문서 비교해서 예산 반영됐는지 알려줘"</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="notebooklm-result" class="mt-4 bg-white p-4 rounded-md border border-stone-200 min-h-[100px] transition-all">
+                            <p class="text-stone-500">질문 버튼을 누르면 AI의 답변이 여기에 표시됩니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <h3 class="font-bold text-lg mb-2">이럴 때 활용해 보세요!</h3>
+                        <ul class="list-disc list-inside text-stone-700 space-y-1">
+                            <li>교육청에서 온 긴급 공문의 핵심만 빠르게 파악할 때</li>
+                            <li>작년 사업 결과 보고서와 올해 계획서를 비교 분석할 때</li>
+                            <li>여러 규정집에서 특정 내용을 한 번에 찾아내고 싶을 때</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Apps Script Section -->
+            <section id="appscript" class="content-section">
+                 <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4">스프레드시트 자동화 마법, Apps Script</h2>
+                    <p class="mb-6 text-stone-700">
+                        수백 명의 명단을 보며 반복적으로 체크하는 일, 이제 그만! Apps Script는 "이런 조건일 땐, 이렇게 행동해!" 라는 '마법 주문'을 한번 알려주면 평생 반복 업무를 대신 처리해줍니다.
+                    </p>
+                    
+                    <div class="bg-stone-100 rounded-lg p-6">
+                        <h3 class="font-bold text-lg mb-4">"마법을 부려볼까요?" - 직접 체험해보세요</h3>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div>
+                                <p class="font-semibold mb-2">1. 자동화할 작업 (스프레드시트)</p>
+                                <table class="w-full bg-white rounded-md border border-stone-200">
+                                    <thead>
+                                        <tr class="bg-stone-200">
+                                            <th class="p-2 border-b">이름</th><th class="p-2 border-b">성적</th><th class="p-2 border-b">봉사시간</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="appscript-table">
+                                        <tr id="row-1"><td class="p-2 border-b">김지민</td><td class="p-2 border-b">A</td><td class="p-2 border-b">25</td></tr>
+                                        <tr id="row-2"><td class="p-2 border-b">박서준</td><td class="p-2 border-b">B</td><td class="p-2 border-b">30</td></tr>
+                                        <tr id="row-3"><td class="p-2 border-b">이수아</td><td class="p-2 border-b">A</td><td class="p-2 border-b">18</td></tr>
+                                        <tr id="row-4"><td class="p-2 border-b">최유진</td><td class="p-2 border-b">A</td><td class="p-2 border-b">40</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <p class="font-semibold mb-2">2. AI에게 마법 주문(코드) 요청하기</p>
+                                <div class="bg-white p-3 rounded-md border border-stone-200 mb-3">
+                                    <p class="font-mono text-sm">"성적이 'A'이고 봉사 시간이 20 이상인 행의 배경색을 초록색으로 바꿔줘."</p>
+                                </div>
+                                <button class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-md hover:bg-green-600 transition" onclick="runAppScriptSim()">✨ 마법 실행하기</button>
+                                <div id="appscript-result" class="mt-3 bg-gray-800 text-white p-3 rounded-md min-h-[100px] text-sm font-mono overflow-x-auto">
+                                    <p class="text-gray-400">마법 실행 버튼을 누르면 AI가 만든 주문(코드)이 여기에 나타납니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="font-bold text-lg mb-2">이럴 때 활용해 보세요!</h3>
+                        <ul class="list-disc list-inside text-stone-700 space-y-1">
+                            <li>특정 조건(성적, 출석률 등)을 만족하는 학생 명단 자동으로 분류하기</li>
+                            <li>납부 기한이 지난 항목에 자동으로 색깔이나 표시 남기기</li>
+                            <li>버튼 하나로 명단에 있는 사람들에게 이메일 대량 발송하기 (심화)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Studio Section -->
+            <section id="aistudio" class="content-section">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4">내 손 안의 만능 작가, AI Studio (Gemini)</h2>
+                    <p class="mb-6 text-stone-700">
+                        가정통신문, 공지사항, 행사 인사말... 글쓰기가 막막할 때 AI Studio에게 맡겨보세요. "교장 선생님 톤으로 축사 써줘" 라고 말만 하면, 몇 초 만에 근사한 초안을 만들어주는 '만능 작가'입니다.
+                    </p>
+                    
+                    <div class="bg-stone-100 rounded-lg p-6">
+                        <h3 class="font-bold text-lg mb-4">"글을 써볼까요?" - 직접 체험해보세요</h3>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div>
+                                <p class="font-semibold mb-2">1. 작성할 글 종류 선택하기</p>
+                                <select id="aistudio-select" class="w-full p-2 border border-stone-300 rounded-md bg-white">
+                                    <option value="newsletter">축제 안내 가정통신문</option>
+                                    <option value="popup">홈페이지 팝업 공지</option>
+                                    <option value="sms">문자 메시지 (SMS)</option>
+                                </select>
+                                <p class="font-semibold mt-4 mb-2">2. AI 작가에게 보낼 요청서 (프롬프트)</p>
+                                <div id="aistudio-prompt" class="bg-white p-3 rounded-md border border-stone-200 min-h-[120px] text-sm"></div>
+                                <button class="w-full mt-3 bg-purple-500 text-white font-bold py-2 px-4 rounded-md hover:bg-purple-600 transition" onclick="runAIStudioSim()">✍️ 글쓰기 요청</button>
+                            </div>
+                            <div>
+                                <p class="font-semibold mb-2">3. AI 작가가 작성한 초안</p>
+                                <div id="aistudio-result" class="bg-white p-3 rounded-md border border-stone-200 min-h-[250px] text-sm whitespace-pre-wrap">
+                                    <p class="text-stone-500">글쓰기 요청 버튼을 누르면 AI가 작성한 글이 여기에 표시됩니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <h3 class="font-bold text-lg mb-2">이럴 때 활용해 보세요!</h3>
+                        <ul class="list-disc list-inside text-stone-700 space-y-1">
+                            <li>모든 종류의 공문, 안내문, 행사 기획서 초안 작성하기</li>
+                            <li>복잡한 정책을 학부모/학생이 이해하기 쉬운 말로 바꿔 설명하기</li>
+                            <li>행사 아이디어나 캠페인 문구가 떠오르지 않을 때 아이디어 얻기</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 text-stone-500">
+            <p>&copy; 2025 스마트 학교 행정 연수 자료. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
